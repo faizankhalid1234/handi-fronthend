@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:5000'
+const BACKEND_URL = process.env.BACKEND_URL || 'https://backend-handi.vercel.app'
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url)

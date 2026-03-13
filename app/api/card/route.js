@@ -18,7 +18,9 @@ export async function GET(request) {
     const response = await fetch(`${BACKEND_URL}/api/card/${cardNumber}`, {
       method: 'GET',
       headers: {
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        'Origin': BACKEND_URL.replace(/\/$/, ''),
+        'Referer': `${BACKEND_URL.replace(/\/$/, '')}/`
       }
     })
     
